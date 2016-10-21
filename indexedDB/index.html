@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>indexedDB</title>
+  <style>
+    #msg {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+<pre>
+  // 请关注调试器信息
+  // <span style="color: #f00;">keyPath</span>
+  // Firefox indexedDB 查看方式 <span
+    style="color: #ccc;">F12 => Toolbox Options(齿轮形状) => Default Developer Tools 下 Storage 勾选</span>
+  var students = [{
+      id: 1001,
+      name: "张三",
+      age: 22
+    }, {
+      id: 1002,
+      name: "李四",
+      age: 22
+    }, {
+      id: 1003,
+      name: "王五",
+      age: 25
+    }
+  ];
+</pre>
+<hr>
+<button id="btn_add">添加数据</button>
+<button id="btn_query">查询数据 1002</button>
+<button id="btn_query_index_name">使用索引查询数据 name=张三</button>
+<button id="btn_query_index_age">使用索引查询数据 age=22</button>
+<button id="btn_update">更新数据 1002</button>
+<button id="btn_del">删除数据 1002</button>
+<button id="btn_clear">清除数据</button>
+
+<hr>
+<div id="msg"></div>
+<script src="index.js"></script>
+</body>
+</html>
